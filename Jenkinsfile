@@ -9,15 +9,16 @@ pipeline {
         }
         stage('Setup Environment') {
             steps {
-                withCredentials([file(credentialsId: '.env.test', variable: 'ENV_FILE')]) {
-                    script {
-                        def projectPath = pwd()
-                        dir(projectPath) {
-                            // Copier le fichier .env.test dans le répertoire du projet sous le nom .env
-                            bat "copy %ENV_FILE% .env"
-                        }
-                    }
-                }
+                // withCredentials([file(credentialsId: '.env.test', variable: 'ENV_FILE')]) {
+                //     script {
+                //         def projectPath = pwd()
+                //         dir(projectPath) {
+                //             // Copier le fichier .env.test dans le répertoire du projet sous le nom .env
+                //             bat "copy %ENV_FILE% .env"
+                //         }
+                //     }
+                // }
+                echo "hello"
             }
         }
         stage('Run Tests') {
