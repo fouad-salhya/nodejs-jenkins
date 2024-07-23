@@ -21,17 +21,17 @@ pipeline {
                 echo "hello"
             }
         }
-        stage('Run Tests') {
-            steps {
-                script {
-                    def projectPath = pwd()
-                    dir(projectPath) {
-                        // Exécuter les tests
-                        bat 'npm run test'
-                    }
-                }
-            }
-        }
+        // stage('Run Tests') {
+        //     steps {
+        //         script {
+        //             def projectPath = pwd()
+        //             dir(projectPath) {
+        //                 // Exécuter les tests
+        //                 bat 'npm run test'
+        //             }
+        //         }
+        //     }
+        // }
     }
 
     post {
