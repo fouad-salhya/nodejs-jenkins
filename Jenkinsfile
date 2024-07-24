@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/fouad-salhya/nodejs-jenkins.git'
+                               git branch: 'main', url: 'https://github.com/fouad-salhya/nodejs-jenkins.git', credentialsId: 'id_github'
             }
         }
         // stage('Setup Environment') {
